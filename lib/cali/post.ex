@@ -7,7 +7,7 @@ defmodule Cali.Post do
       slug: file_to_slug(file)
     }
 
-    Path.join(["priv/posts", file])
+    Path.join([Application.app_dir(:cali, "priv/posts"), file])
     |> File.read!
     |> split
     |> extract(post)
@@ -37,7 +37,7 @@ defmodule Cali.Post do
   end
 
   defp get_prop(props, key) do
-    case :proplists.get_value(String.to_char_list(key), props) do
+    case :proplists.get_value(String.to_charlist(key), props) do
       :undefined -> nil
       x -> to_string(x)
     end

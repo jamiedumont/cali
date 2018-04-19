@@ -1,7 +1,7 @@
 defmodule Cali.Crawler do
 
   def crawl do
-    File.ls!("priv/posts")
+    File.ls!(Application.app_dir(:cali, "priv/posts"))
     |> Enum.map(&Cali.Post.compile/1)
     |> Enum.sort(&sort/2)
   end

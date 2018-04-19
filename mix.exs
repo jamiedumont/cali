@@ -40,7 +40,8 @@ defmodule Cali.Mixfile do
       {:cowboy, "~> 1.0"},
       {:yamerl, github: "yakaz/yamerl"},
       {:earmark, "~> 1.2.5"},
-      {:timex, "~> 3.1"}
+      {:timex, "~> 3.1"},
+      {:distillery, "~> 1.5"}
     ]
   end
 end
