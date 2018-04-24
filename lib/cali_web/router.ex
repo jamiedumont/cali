@@ -17,6 +17,7 @@ defmodule CaliWeb.Router do
     pipe_through :browser # Use the default browser stack
 
     get "/blog/:slug", PostController, :show
+    get "/update", PostController, :update
     get "/", PageController, :index
   end
 

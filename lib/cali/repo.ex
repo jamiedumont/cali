@@ -18,6 +18,14 @@ defmodule Cali.Repo do
     GenServer.call(__MODULE__, {:list})
   end
 
+  def count() do
+    GenServer.call(__MODULE__, {:count})
+  end
+
+  def update() do
+    GenServer.call(__MODULE__, {:update})
+  end
+
   def handle_call({:get_by_slug, slug}, _from, posts) do
     case Enum.find(posts, fn(x) -> x.slug == slug end) do
       nil -> {:reply, :not_found, posts}
@@ -27,6 +35,16 @@ defmodule Cali.Repo do
 
   def handle_call({:list}, _from , posts) do
     {:reply, {:ok, posts}, posts}
+  end
+
+  def handle_call({:count}, _from , posts) do
+    count = Enum.count(posts)
+    {:reply, {:ok, count}, posts}
+  end
+
+  def handle_call({:update}, _from, _posts) do
+    new_posts = Cali.Crawler.crawl
+    {:reply, :ok, new_posts}
   end
 
 end

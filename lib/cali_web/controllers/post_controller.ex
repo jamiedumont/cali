@@ -8,6 +8,12 @@ defmodule CaliWeb.PostController do
     end
   end
 
+  def update(conn, _) do
+    case Cali.Repo.update do
+      :ok -> redirect conn, to: "/"
+    end
+  end
+
   def not_found(conn) do
     conn
     |> put_status(:not_found)
