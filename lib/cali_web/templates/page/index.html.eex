@@ -1,9 +1,27 @@
-<%= for post <- @posts do %>
-  <article class="row">
-    <h2><%= post.title %></h2>
-    <p><%= Timex.format!(post.date, "{Mshort} {D} {YYYY}") %></p>
-    <p><%= post.description %></p>
-    <p><a href="<%= post_path(@conn, :show, post.slug) %>">Read post</a></p>
-  </article>
-<% end %>
+<div class="py-8 mx-auto max-w-md">
+
+  <div class="text-center font-bold leading-tight mt-4 mb-16 md:mb-32 px-4">
+    <h2 class="text-xl my-0">
+      Jamie Dumont.
+      <span class="font-normal">Developer based in Cornwall.</span>
+    </h2>
+    <h1 class="mt-4 pt-4 text-3xl md:text-5xl border-t border-grey-lighter">
+      Building for the web &amp; creating durable businesses.
+    </h1>
+  </div>
+
+  <div class="max-w-sm mx-auto leading-normal">
+    <h3 class="text-sm text-grey-light tracking-wide uppercase font-semibold mt-16 mb-8">Articles</h3>
+
+    <%= for post <- @posts do %>
+      <article class="mb-8">
+        <a class="no-underline" href="<%= post_path(@conn, :show, post.slug) %>">
+          <h2 class="my-1 text-2xl text-grey-darkest"><%= post.title %></h2>
+          <p class="my-1 text-grey text-xs"><%= Timex.format!(post.date, "{Mshort} {D} {YYYY}") %></p>
+          <p class="my-2 text-sm font-light text-grey-darkest"><%= post.description %></p>
+        </a>
+      </article>
+    <% end %>
+  </div>
+</div>
 

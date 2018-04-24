@@ -1,1 +1,23 @@
 /* This file is for your main application css. */
+/*
+*   This injects Tailwind's base styles, which is a combination of
+*   Normalize.css and some additional base styles.
+*/
+
+@import "tailwind/_preflight";
+
+
+/* Baseline */
+@import "baseline/_body";
+
+
+/* Components */
+
+@import "components/_markdown";
+
+/*
+*   This injects all of Tailwind's utility classes, generated based on your
+*   config file.
+*/
+
+@import "tailwind/_utilities";
