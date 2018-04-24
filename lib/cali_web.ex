@@ -40,6 +40,7 @@ defmodule CaliWeb do
       import CaliWeb.Router.Helpers
       import CaliWeb.ErrorHelpers
       import CaliWeb.Gettext
+      import CaliWeb.Helpers
     end
   end
 
