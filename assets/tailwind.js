@@ -133,6 +133,15 @@ let colors = {
   'pink-lightest': '#ffebef',
 }
 
+let selected_colors =  {
+  'green': colors['green'],
+  'grey-darkest': colors['grey-darkest'],
+  'grey-dark': colors['grey-dark'],
+  'grey': colors['grey'],
+  'grey-light': colors['grey-light'],
+  'grey-lighter': colors['grey-lighter'],
+}
+
 module.exports = {
 
   /*
@@ -148,7 +157,8 @@ module.exports = {
   |
   */
 
-  colors: colors,
+  // colors: colors,
+  colors: selected_colors,
 
 
   /*
@@ -173,8 +183,8 @@ module.exports = {
   screens: {
     'sm': '576px',
     'md': '768px',
-    'lg': '992px',
-    'xl': '1200px',
+    //  'lg': '992px',
+    //  'xl': '1200px',
   },
 
 
@@ -283,14 +293,14 @@ module.exports = {
 
   fontWeights: {
     'hairline': 100,
-    'thin': 200,
+    //    'thin': 200,
     'light': 300,
     'normal': 400,
-    'medium': 500,
+    //    'medium': 500,
     'semibold': 600,
     'bold': 700,
-    'extrabold': 800,
-    'black': 900,
+    //    'extrabold': 800,
+    //    'black': 900,
   },
 
 
@@ -346,7 +356,7 @@ module.exports = {
   |
   */
 
-  textColors: colors,
+  textColors: selected_colors,
 
 
   /*
@@ -362,7 +372,7 @@ module.exports = {
   |
   */
 
-  backgroundColors: colors,
+  backgroundColors: selected_colors,
 
 
   /*
@@ -404,7 +414,7 @@ module.exports = {
   |
   */
 
-  borderColors: Object.assign({ default: colors['grey-light'] }, colors),
+  borderColors: Object.assign({ default: colors['grey-light'] }, selected_colors),
 
 
   /*
