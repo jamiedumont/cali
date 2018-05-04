@@ -44,7 +44,7 @@ Luckily, Statamic & Charge have an easy to implement solution. We already know a
 
 We’ve set up a Role for our members last time, so head back to that [tutorial](https://www.jamiedumont.co.uk/blog/build-a-membership-site-with-statamic/) if you can’t remember how. For assigning Roles to Stripe plans, head to Configure > Addons in the Control Panel, and then open the Charge settings page from the three dots drop-down on the right hand side. There you can configure how Stripe pans will map to Statamic Roles. Here’s an example:
 
-![Mapping Stripe plans to Roles in the Statamic Control Panel with Charge](/img/membership-site/stripe-plan-roles.png)
+![Mapping Stripe plans to Roles in the Statamic Control Panel with Charge](/images/membership-site/stripe-plan-roles.png)
 
 In this scenario, we have three subscription tiers each with a different price and level of access to out content.  `gold-members`  have access to everything, so get all three of our Roles.  `silver-members`  get access to the Silver Role, and the Bronze Role.  `bronze-members`  predictably just get the Bronze Role, and access to only some of the content.
 

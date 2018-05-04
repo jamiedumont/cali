@@ -72,7 +72,7 @@ Login into your Control Panel, and head to the `Users >> User Roles` tab at the 
 
 Once there, create a new role for your members. Unless you want them to have access to the Control Panel _(unlikely)_, leave the settings as per below.
 
-![Role creation in Statamic Control Panel](/img/membership-site/create_role.png)
+![Role creation in Statamic Control Panel](/images/membership-site/create_role.png)
 
 This will allow users to login on the “front-end” of the site, but not give them access to the Control Panel.
 
@@ -104,7 +104,7 @@ Once you have an account, we'll create your new subscription plan. To do that, h
 
 Here you’ll input the details of your membership plan. You can call it whatever you like, but you’ll need to use the ID later when we configure Charge.
 
-![Create a subscription plan in Stripe dashboard](/img/membership-site/stripe_sub_plan_config.png)
+![Create a subscription plan in Stripe dashboard](/images/membership-site/stripe_sub_plan_config.png)
 
 You can see that I’ve set up a plan called _“Demo Membership”_ with an ID of _"demo\_membership"_ which will cost my members £2.49 a month.
 
@@ -121,7 +121,7 @@ Rename the _"sample.gitignore"_ file in the root of the project to _".gitignore"
 
 Your API keys are accessible from Stripe’s side menu. Make sure that when you’re developing or testing, you’re using the correct _“test”_ keys.
 
-![View test data in Stripe dashboard](/img/membership-site/stripe_test_data.png)
+![View test data in Stripe dashboard](/images/membership-site/stripe_test_data.png)
 
 _**Sidenote:** You will need to set up your subscription plan in both “test” and “live” environments. They are not automatically replicated._
 
@@ -139,7 +139,7 @@ These allow Stripe to update Charge _(and your website)_ on the status of your s
 
 In the Stripe sidebar, head to `API >> Webhooks`. There you will need to add new endpoint, which will look like this:
 
-![Add a webhook in Stripe dashboard](/img/membership-site/webhook.png)
+![Add a webhook in Stripe dashboard](/images/membership-site/webhook.png)
 
 The URL should look like this...
 ```
@@ -168,7 +168,7 @@ Head to `Addons >> Charge` in the Statamic control panel. There you’ll find a 
 
 If you’ve been following along, it should look like this:
 
-![Configure role for Statamic/Charge](/img/membership-site/charge_role.png)
+![Configure role for Statamic/Charge](/images/membership-site/charge_role.png)
 
 Here, you’ll also find other settings you may want to configure such as email templates and default currencies. I won’t dig into these now, but full instructions for Charge can be found [here.](https://bitbucket.org/edalzell/charge/wiki/Home)
 
@@ -383,7 +383,7 @@ My content goes here
 
 And head back to you browser. It should look like this now.
 
-![Example of content page from Statamic](/img/membership-site/content.png)
+![Example of content page from Statamic](/images/membership-site/content.png)
 
 Statamic is using the default template, which looks like this:
 ``` html
