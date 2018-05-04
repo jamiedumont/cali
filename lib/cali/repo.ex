@@ -18,6 +18,14 @@ defmodule Cali.Repo do
     GenServer.call(__MODULE__, {:list})
   end
 
+  def list_with_drafts() do
+    GenServer.call(__MODULE__, {:list_with_drafts})
+  end
+
+  def all_titles() do
+    GenServer.call(__MODULE__, {:all_titles})
+  end
+
   def count() do
     GenServer.call(__MODULE__, {:count})
   end
@@ -34,7 +42,23 @@ defmodule Cali.Repo do
   end
 
   def handle_call({:list}, _from , posts) do
+    live_posts =
+      posts
+      |> Enum.reject(fn(x) -> x.draft == "true" end)
+
+    {:reply, {:ok, live_posts}, posts}
+  end
+
+  def handle_call({:list_with_drafts}, _from , posts) do
     {:reply, {:ok, posts}, posts}
+  end
+
+  def handle_call({:all_titles}, _from, posts) do
+    titles =
+      posts
+      |> Enum.map(fn(x) -> x.title end)
+
+    {:reply, {:ok, titles}, posts}
   end
 
   def handle_call({:count}, _from , posts) do

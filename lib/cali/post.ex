@@ -1,6 +1,6 @@
 defmodule Cali.Post do
 
-  defstruct slug: "", title: "", date: "", description: "", body: ""
+  defstruct slug: "", title: "", date: "", description: "", body: "", draft: false
 
   def compile(file) do
     post = %Cali.Post{
@@ -32,7 +32,8 @@ defmodule Cali.Post do
       title: get_prop(props, "title"),
       date: Timex.parse!(get_prop(props, "date"), "{ISOdate}"),
       description: get_prop(props, "description"),
-      body: body
+      draft: get_prop(props, "draft"),
+      body: body,
     }
   end
 
