@@ -19,6 +19,10 @@ defmodule CaliWeb.Router do
     get "/blog/:slug", PostController, :show
     get "/update", PostController, :update
     get "/", PageController, :index
+
+    # static pages
+    get "/about", PageController, :about
+    get "/uses", PageController, :uses
   end
 
   # Other scopes may use custom stacks.
