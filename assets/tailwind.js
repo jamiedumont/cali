@@ -140,6 +140,9 @@ let selected_colors =  {
   'grey': colors['grey'],
   'grey-light': colors['grey-light'],
   'grey-lighter': colors['grey-lighter'],
+  'grey-lightest': colors['grey-lightest'],
+  'white': colors['white'],
+  'dark-blue': '#181a26',
 }
 
 module.exports = {
@@ -704,6 +707,7 @@ module.exports = {
     '4': '1rem',
     '6': '1.5rem',
     '8': '2rem',
+    '16': '4rem',
   },
 
 
