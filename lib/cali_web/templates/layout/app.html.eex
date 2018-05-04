@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <%=
-      render_existing(@view_module, "meta." <> @view_template, assigns)
-      || render CaliWeb.LayoutView, "meta.html", assigns
+render_existing(@view_module, "meta." <> @view_template, assigns)
+|| render CaliWeb.LayoutView, "meta.html", assigns
     %>
 
     <link rel="stylesheet" href="<%= static_path(@conn, "/css/app.css") %>">
@@ -15,24 +15,89 @@
 
   <body>
 
-    <header class="mx-w-md mx-auto mb-8 mt-16i md:mt-32">
+    <header class="max-w-md mx-auto mb-8 mt-16 md:mt-32">
       <a href="/">
         <img
-        class="mx-auto block h-32"
-        src="<%= static_path(@conn, "/images/logo.svg") %>"
-        alt=""
-        >
+          class="mx-auto block h-32"
+          src="<%= static_path(@conn, "/images/logo.svg") %>"
+          alt=""
+          >
       </a>
     </header>
 
     <p class="alert alert-info" role="alert"><%= get_flash(@conn, :info) %></p>
     <p class="alert alert-danger" role="alert"><%= get_flash(@conn, :error) %></p>
 
-    <main role="main">
+    <main class="px-8 md:px-0" role="main">
       <%= render @view_module, @view_template, assigns %>
     </main>
 
-    <%# <script src="<%= static_path(@conn, "/js/app.js") %>"></script> %>
+    <footer class="max-w-md mx-auto">
+
+
+
+      <!-- Begin MailChimp Signup Form -->
+      <div class="" id="mc_embed_signup">
+
+        <form 
+          action="https://jamiedumont.us15.list-manage.com/subscribe/post?u=c228b0668bbf4a2fd3a79319d&amp;id=67b77b6af2"
+          method="post"
+          id="mc-embedded-subscribe-form"
+          name="mc-embedded-subscribe-form"
+          class="bg-green py-4 px-8 mx-auto md:rounded validate"
+          target="_blank" 
+          novalidate
+          >
+
+          <div id="mc_embed_signup_scroll">
+
+            <h4 class="my-2 text-white text-center text-lg font-semibold">Sign up for my newsletter</h4>
+
+            <p class="my-2 text-center text-white text-sm font-light">Stay up to date with my latest articles and projects by signing up to my fortnightly summary.</p>
+
+            <label class="text-white text-xs" for="mce-EMAIL">Email Address</label>
+            <div class="max-w-md mx-auto clearfix mt-1 mb-4">
+              <input
+                class="text-sm input-reset border-none float-left text-grey-darkest bg-white p-3 leading-tight rounded-t md:rounded-t-none md:rounded-l w-full md:w-3/4"
+                placeholder="Your Email Address"
+                type="email"
+                name="EMAIL"
+                value=""
+                id="mce-EMAIL"
+                >
+                <input
+                  class="text-sm float-left py-3 text-center border-none bg-grey-darkest text-white cursor-pointer w-full md:w-1/4 rounded-b md:rounded-b-none md:rounded-r"
+                  type="submit"
+                  value="Subscribe"
+                  >
+            </div>
+
+                <div id="mce-responses" class="clear">
+                  <div class="response" id="mce-error-response" style="display:none"></div>
+                  <div class="response" id="mce-success-response" style="display:none"></div>
+                </div>
+
+                <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                <div style="position: absolute; left: -5000px;" aria-hidden="true">
+                  <input type="text" name="b_c228b0668bbf4a2fd3a79319d_67b77b6af2" tabindex="-1" value="">
+                </div>
+
+
+          </div>
+
+        </form>
+      </div>
+      <!--End mc_embed_signup-->
+
+      <nav class="border-t border-grey-light mt-4 mb-16 py-4">
+        <a class="mr-4 text-grey hover:text-green text-xs no-underline font-light hover:font-normal inline-block" href="/">Home</a>
+        <a class="mr-4 text-grey hover:text-green text-xs no-underline font-light hover:font-normal inline-block" href="/about">About</a>
+        <a class="text-grey hover:text-green text-xs no-underline font-light hover:font-normal inline-block" href="/uses">Uses</a>
+
+      </nav>
+    </footer>
+
+    <!-- <script src="<%= static_path(@conn, "/js/app.js") %>"></script>-->
 
   </body>
 </html>
