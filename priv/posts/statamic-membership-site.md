@@ -28,7 +28,7 @@ The basic requirements of any membership site are:
 * Some of the content is protected, and only accessible to members with an active subscription.
 * A way to charge your members for access, and for editors to manage their accounts & subscriptions.
 
-Fortunately Statamic provides all of this out of the box, except the last requirement. For the billing and subscription management we’re going to be using Stripe via an Addon _(what Statamic calls its plugins)_ called [Charge](https://silentzconsulting.com/addons/charge) written by Erin, one of the Statamic community’s Addon gurus.
+Fortunately Statamic provides all of this out of the box, except the last requirement. For the billing and subscription management we’re going to be using Stripe via an Addon _(what Statamic calls its plugins)_ called [Charge](https://statamic.com/marketplace/addons/charge) written by Erin, one of the Statamic community’s Addon gurus.
 
 _**Sidenote:** the Statamic community is frankly awesome. I also use a language called Elixir, whose [forum](https://elixirforum.com/) is widely considered one of the absolute best examples of what an online developer community should be. Statamic's is even better…_
 
@@ -150,7 +150,7 @@ https://membership-site.dev/!/Charge/webhook
 Again, these endpoints need to be setup for both the _“test”_ and _“live”_ environments. You can add multiple endpoints per environment, so you can add an endpoint for both your local development environment, and a staging or test server before deploying to production _(where you’ll be using the “live” keys)_.
 
 ## Install & configure Charge
-For the next step, you’ll need to purchase and install [Charge](https://silentzconsulting.com/addons/charge).
+For the next step, you’ll need to purchase and install [Charge](https://statamic.com/marketplace/addons/charge/docs).
 
 _**Sidenote**: If you’re coming from the world of Wordpress, you might be thinking that $199 for a Statamic license, and $99 for a Charge license is a bit steep. I can promise you, as someone that’s built both a CMS and a Stripe integration from scratch, these tools are worth every dollar, and should pay for themselves with the time they save you._
 
