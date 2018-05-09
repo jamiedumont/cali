@@ -1,5 +1,6 @@
 defmodule CaliWeb.PostView do
   use CaliWeb, :view
+  import Phoenix.Controller, only: [current_url: 2]
 
   def render("meta.show.html", assigns) do
     ~E{
@@ -8,7 +9,7 @@ defmodule CaliWeb.PostView do
         name="description"
         content="<%= assigns.post.description %>"
       >
-      <link rel="canonical" href="<%= render_canonical(assigns.conn.path_info) %>" />
+      <link rel="canonical" href="<%= current_url(assigns.conn, %{\}) %>" />
     }
   end
 end
