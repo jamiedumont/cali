@@ -3,5 +3,6 @@
   name="description"
   content="Articles about building for the web & creating a durable business"
 >
+<link rel="canonical" href="<%= Phoenix.Controller.current_url(assigns.conn, %{}) %>" />
 
 

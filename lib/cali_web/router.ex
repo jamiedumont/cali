@@ -23,6 +23,8 @@ defmodule CaliWeb.Router do
     # static pages
     get "/about", PageController, :about
     get "/uses", PageController, :uses
+
+    get "/sitemap.xml", FeedController, :sitemap
   end
 
   # Other scopes may use custom stacks.
