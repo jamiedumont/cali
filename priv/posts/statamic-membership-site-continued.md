@@ -4,7 +4,7 @@ date: 2018-03-23
 description: I go into more detail on the ways you can protect content and restrict access on a Statamic site.
 ---
 
-After my [tutorial](https://www.jamiedumont.co.uk/blog/build-a-membership-site-with-statamic/) a couple of weeks ago about building a membership site with [Statamic](https://statamic.com), which only focussed on how to protect content from non-users, making no distinction between the different “types” of users possible, I’ve since had a few questions about how to build out the rest of the site. Most were related to the templating, and how you’d add more specific restrictions around the content; so here’s a few patterns that I’ve found useful when building membership sites with Statamic.
+After my [tutorial](https://www.jamiedumont.co.uk/blog/statamic-membership-site/) a couple of weeks ago about building a membership site with [Statamic](https://statamic.com), which only focussed on how to protect content from non-users, making no distinction between the different “types” of users possible, I’ve since had a few questions about how to build out the rest of the site. Most were related to the templating, and how you’d add more specific restrictions around the content; so here’s a few patterns that I’ve found useful when building membership sites with Statamic.
 
 ## Navigation
 One of the first things you’ll want to do is display a different menu or navigation depending on whether a user is logged in or not. Where they are logged out, you obviously will want to provide them links to login or register. If they’re logged in then a link to their dashboard, protected content or a “Log out” button would be a better use of the same space.
