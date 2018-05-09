@@ -15,7 +15,7 @@
 
     <%= for post <- @posts do %>
       <article class="mb-8">
-        <a class="no-underline" href="<%= post_url(@conn, :show, post.slug) %>">
+        <a class="no-underline" href="<%= post_path(@conn, :show, post.slug) %>">
           <h2 class="my-1 text-2xl text-grey-darkest"><%= post.title %></h2>
           <p class="my-1 text-grey text-xs"><%= Timex.format!(post.date, "{Mshort} {D} {YYYY}") %></p>
           <p class="my-2 text-sm font-light text-grey-darkest"><%= post.description %></p>

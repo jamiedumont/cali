@@ -15,7 +15,7 @@
   <body>
 
     <header class="max-w-md mx-auto mb-8 mt-16 md:mt-32">
-      <a href="<%= page_url(@conn, :index) %>">
+      <a href="<%= page_path(@conn, :index) %>">
         <img
           class="mx-auto block h-32"
           src="<%= static_path(@conn, "/images/logo.svg") %>"
@@ -89,9 +89,9 @@
       <!--End mc_embed_signup-->
 
       <nav class="border-t border-grey-light mt-4 mb-16 py-4">
-        <a class="mr-4 text-grey hover:text-green text-xs no-underline font-light hover:font-normal inline-block" href="<%= page_url(@conn, :index) %>">Home</a>
-        <a class="mr-4 text-grey hover:text-green text-xs no-underline font-light hover:font-normal inline-block" href="<%= page_url(@conn, :about) %>">About</a>
-        <a class="text-grey hover:text-green text-xs no-underline font-light hover:font-normal inline-block" href="<%= page_url(@conn, :uses) %>">Uses</a>
+        <a class="mr-4 text-grey hover:text-green text-xs no-underline font-light hover:font-normal inline-block" href="<%= page_path(@conn, :index) %>">Home</a>
+        <a class="mr-4 text-grey hover:text-green text-xs no-underline font-light hover:font-normal inline-block" href="<%= page_path(@conn, :about) %>">About</a>
+        <a class="text-grey hover:text-green text-xs no-underline font-light hover:font-normal inline-block" href="<%= page_path(@conn, :uses) %>">Uses</a>
 
       </nav>
     </footer>
