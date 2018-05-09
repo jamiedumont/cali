@@ -1,5 +1,5 @@
 <div class="max-w-md mx-auto py-8">
-  <h1 class="mb-4">Uses</h1>  
+  <h2 class="mb-4">Uses</h2>  
   <div class="markdown">
 <p>Here&rsquo;s a mostly complete run down of the tools and software that I use on
 a near daily basis to get my work done. For now, I&rsquo;ve just listed the software,
@@ -10,9 +10,9 @@ list.</a></p>
 
 <hr />
 
-<h1 id="software">Software</h1>
+<h3 id="software">Software</h3>
 
-<h3 id="iterm2-blink">iTerm2 &amp; Blink</h3>
+<h4 id="iterm2-blink">iTerm2 &amp; Blink</h4>
 
 <p>Coming to web development as designer, I had the sort of irrational fear that
 you&rsquo;d expect someone accustomed to beautiful, intuitives GUIs to have. That
@@ -34,7 +34,7 @@ environment.</p>
 for SSH that&rsquo;s far more robust and resilient to flaky connections — perfect for
 roaming and working around Cornwall with it&rsquo;s spotty data service!</p>
 
-<h3 id="neovim">Neovim</h3>
+<h4 id="neovim">Neovim</h4>
 
 <p>Much like using the Terminal rather than Finder, I felt that an editor like Vim
 was the &ldquo;proper&rdquo; way (NB: there is no &ldquo;proper&rdquo; way, this was just my wide-eyed
@@ -61,7 +61,7 @@ fine until it goes wrong and you have to debug something totally alien! I found
 the solution was the classic (Neo)Vim + Tmux combination. My reason for using
 NeoVim is simply that it allows for async linting.</p>
 
-<h3 id="tower-git">Tower (Git)</h3>
+<h4 id="tower-git">Tower (Git)</h4>
 
 <p>From what I&rsquo;ve heard, I&rsquo;m fortunate enough to have never used Subversion. My
 only experience of VCS has been Git. As with everything else, I started out
@@ -74,7 +74,7 @@ which I&rsquo;m perfectly happy with, but I still find myself firing up Tower
 whenever I&rsquo;m on my laptop for some reason. I never do any really complex
 branching or merges, so I think that it&rsquo;s more habit than anything else!</p>
 
-<h3 id="browsers">Browsers</h3>
+<h4 id="browsers">Browsers</h4>
 
 <p>Safari is my go-to for almost everything. I like it&rsquo;s bookmark and tab syncing
 with my iPad and iPhone, and love the reduced CPU usage and resulting battery
@@ -89,7 +89,7 @@ Safari the same as Firefox has done.</p>
 plugins available to assist with debugging. That said, I prefer the Firefox UI
 and functionality — screenshots for example.</p>
 
-<h3 id="sketch">Sketch</h3>
+<h4 id="sketch">Sketch</h4>
 
 <p>I started using Sketch about 5 years ago when Adobe decided that Creative Cloud
 was a good idea. Sketch felt like a good protest purchase, but it turned out to
@@ -108,28 +108,28 @@ performance and price. How they can build such brilliant apps for the money
 they are charging boggles my mind. Their addition of iOS apps, and an Adobe
 Indesign equivalent could cement their place as the company to beat here!</p>
 
-<h3 id="slack">Slack</h3>
+<h4 id="slack">Slack</h4>
 
 <p>I use Slack. I&rsquo;m not as impressed as I was with it when I first started using
 it. I&rsquo;ve found their recent versions a memory hog, and I&rsquo;m rapidly going off
 the concept of instant-messaging in general. It&rsquo;s incredibly distracting, and
 not as great for running a business as we all think it is.</p>
 
-<h3 id="things-3">Things 3</h3>
+<h4 id="things-3">Things 3</h4>
 
 <p>After years of trying loads of task manager and finally settling on just
 a simple notebook; Cultured Code released Things 3. When I originally wrote
 about it at release, I suggested it might be the only app capable of pulling me
 away from pena &amp; paper. Turns out I was right&hellip;</p>
 
-<h3 id="messages">Messages</h3>
+<h4 id="messages">Messages</h4>
 
 <p>If there&rsquo;s one thing that keeps me glued to Apple&rsquo;s ecosystem, it&rsquo;s the ability
 to send iMessages from my laptop. As a messaging platform, I think it hits the
 sweet spot; although I couldn&rsquo;t care less about all the stuff they keep adding
 to it&hellip;</p>
 
-<h3 id="1password">1Password</h3>
+<h4 id="1password">1Password</h4>
 
 <p>If you&rsquo;re not using a password manager these days, I&rsquo;m not sure how you manage!
 I put a lot of faith in the security of 1Password (perhaps naively!) because it
@@ -137,7 +137,7 @@ stores <em>everything</em>, and I mean <em>everything</em> important. I think th
 plan (to share some of your passwords with others) is overpriced, but if that&rsquo;s
 what they need to charge to make it secure; so be it.</p>
 
-<h3 id="backblaze">Backblaze</h3>
+<h4 id="backblaze">Backblaze</h4>
 
 <p>I&rsquo;ve got very lazy the last few years with my local backups. I rarely, if ever,
 back up my laptop to a local drive. This is partly because most of my work
@@ -148,7 +148,7 @@ multiple ways.</p>
 
 <hr />
 
-<h2 id="hardware">Hardware</h2>
+<h3 id="hardware">Hardware</h3>
 
 <p>Full details coming shortly. For now, here&rsquo;s a brief list:</p>
 
