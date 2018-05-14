@@ -1,0 +1,9 @@
+APP="cali"
+
+BUILD_HOST="do"
+BUILD_USER="jamie"
+BUILD_AT="/home/jamie/builds/cali"
+
+PRODUCTION_HOSTS="do"
+PRODUCTION_USER="jamie"
+DELIVER_TO="/home/jamie/releases/cali"
