@@ -42,7 +42,6 @@ defmodule Cali.Mixfile do
       {:earmark, "~> 1.2.5"},
       {:timex, "~> 3.1"},
       {:distillery, "~> 1.5"},
-      {:edeliver, "~> 1.5.0"}
     ]
   end
 end
