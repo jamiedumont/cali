@@ -14,6 +14,14 @@ config :cali, CaliWeb.Endpoint,
   watchers: [node: ["node_modules/brunch/bin/brunch", "watch", "--stdin",
                     cd: Path.expand("../assets", __DIR__)]]
 
+config :cali, Cali.Repo,
+  adapter: Ecto.Adapters.Postgres,
+  database: "cali",
+  username: "postgres",
+  password: "postgres",
+  port: "5432"
+
+    
 # ## SSL Support
 #
 # In order to use HTTPS in development, a self-signed
