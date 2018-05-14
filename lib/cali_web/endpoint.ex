@@ -30,6 +30,8 @@ defmodule CaliWeb.Endpoint do
   plug Plug.MethodOverride
   plug Plug.Head
 
+  plug CaliWeb.Plug.Redirect
+
   # The session will be stored in the cookie and signed,
   # this means its contents can be read but not tampered with.
   # Set :encryption_salt if you would also like to encrypt it.
