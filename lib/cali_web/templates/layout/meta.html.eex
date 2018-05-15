@@ -1,7 +1,7 @@
-<title>Jamie Dumont</title>
+<title>Web Developer in Cornwall - Jamie Dumont</title>
 <meta
   name="description"
-  content="Articles about building for the web & creating a durable business"
+  content="Jamie Dumont is a Web Designer & Developer based in Truro, Cornwall. He concentrates on building websites the 'right' way using Elixir, Statamic and Javascript."
 >
 <link rel="canonical" href="<%= Phoenix.Controller.current_url(assigns.conn, %{}) %>" />
 

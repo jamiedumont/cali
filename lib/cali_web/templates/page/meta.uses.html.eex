@@ -1,0 +1,18 @@
+<title>Uses | Web Developer in Cornwall - Jamie Dumont</title>
+<meta
+  name="description"
+  content="A rundown of the tools and software that I use on a near daily basis to buid websites and keep myself sane!"
+>
+<link rel="canonical" href="<%= current_url(assigns.conn, %{}) %>" />
+
+<!-- Open Graph data -->
+<meta property="og:title" content="Uses | Web Developer in Cornwall - Jamie Dumont" />
+<meta property="og:url" content="<%= current_url(assigns.conn, %{}) %>" />
+<meta property="og:type" content="website" />
+<meta property="og:description" content="A rundown of the tools and software that I use on a near daily basis to buid websites and keep myself sane!" />
+
+<!-- Twitter Card -->
+<meta name="twitter:title" content="Uses | Web Developer in Cornwall - Jamie Dumont" />
+<meta name="twitter:description" content="A rundown of the tools and software that I use on a near daily basis to buid websites and keep myself sane!" />
+<meta name="twitter:url" content="<%= current_url(assigns.conn, %{}) %>" />
+
