@@ -17,7 +17,7 @@ config :cali, CaliWeb.Endpoint,
 
 config :cali, Cali.Repo,
   adapter: Ecto.Adapters.Postgres,
-  database: "cali",
+  database: "cali_dev",
   username: "postgres",
   password: "postgres",
   port: "5432"

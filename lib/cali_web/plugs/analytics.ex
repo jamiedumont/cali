@@ -6,7 +6,13 @@ defmodule CaliWeb.Plug.Analytics do
   end
 
   def call(conn, _options) do
-    IO.inspect conn
+    referer = case get_req_header(conn, "referer") do
+      [referer | tail ] -> referer
+      _ -> nil
+    end
+    page = conn.request_path
+    Cali.Analytics.log_page(%{ referer: referer, page: page })
+    conn
   end
 
 end

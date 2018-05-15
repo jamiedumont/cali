@@ -4,7 +4,7 @@
     @apply .leading-normal .mb-6 .text-grey-darkest .font-light;
 
     b {
-      @apply .font-semibold .text-black;
+      @apply .font-semibold;
     }
   }
 
