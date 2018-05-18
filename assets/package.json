@@ -2,8 +2,9 @@
   "repository": {},
   "license": "MIT",
   "scripts": {
-    "deploy": "brunch build --production",
-    "watch": "brunch watch --stdin"
+    "css:purge": "./node_modules/purgecss/bin/purgecss -c purge.config.js -o ../priv/static/css",
+    "css:postcss": "./node_modules/postcss-cli/bin/postcss css/app.css -o ../priv/static/css/app.css --config ./postcss.config.js",
+    "css": "npm run css:postcss && npm run css:purge"
   },
   "dependencies": {
     "phoenix": "file:../deps/phoenix",
@@ -11,15 +12,12 @@
   },
   "devDependencies": {
     "autoprefixer": "^7.2.5",
-    "babel-brunch": "6.1.1",
-    "brunch": "2.10.9",
-    "clean-css-brunch": "2.10.0",
     "csswring": "^6.0.2",
-    "postcss-brunch": "^2.1.0",
+    "postcss-cli": "^5.0.0",
     "postcss-import": "^11.0.0",
     "postcss-nested": "^3.0.0",
     "postcss-smart-import": "^0.7.6",
-    "tailwindcss": "^0.4.1",
-    "uglify-js-brunch": "2.10.0"
+    "purgecss": "^0.21.0",
+    "tailwindcss": "^0.4.1"
   }
 }

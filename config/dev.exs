@@ -11,9 +11,9 @@ config :cali, CaliWeb.Endpoint,
   url: [scheme: "http", host: "178.62.82.117", port: 4000],
   debug_errors: true,
   code_reloader: true,
-  check_origin: false,
-  watchers: [node: ["node_modules/brunch/bin/brunch", "watch", "--stdin",
-                    cd: Path.expand("../assets", __DIR__)]]
+  check_origin: false
+  #  watchers: [node: ["node_modules/brunch/bin/brunch", "watch", "--stdin",
+  #                  cd: Path.expand("../assets", __DIR__)]]
 
 config :cali, Cali.Repo,
   adapter: Ecto.Adapters.Postgres,
