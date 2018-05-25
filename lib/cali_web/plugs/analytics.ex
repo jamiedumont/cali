@@ -6,11 +6,7 @@ defmodule CaliWeb.Plug.Analytics do
   end
 
   def call(conn, _options) do
-    IO.inspect conn
-
     r = extract_referer(conn)
-
-    page = conn.request_path
 
     attrs = %{
       referer: r,
@@ -21,6 +17,7 @@ defmodule CaliWeb.Plug.Analytics do
     Cali.Analytics.log_page(attrs)
 
     conn
+
   end
 
   defp extract_referer(conn) do
