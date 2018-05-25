@@ -9,7 +9,7 @@ title: "Creative Class Review"
 
 <a href="https://creativeclass.co/ref/37/" title="Learn the business of freelancing"><img src="https://creativeclass.co/wp-content/uploads/2017/09/cc-aff03.jpg" alt="Learn the business of freelancing"></a>
 
-CC is a course for freelancers from Paul Jarvis and Kayleigh Moore that covers all the “other stuff” that comes with working for yourself. It assumes that you’ve got a creative skill — be it writing, design or development — and shows you how to use that skill to earn a living. It covers many of the common pitfalls for new freelancers like pricing, contracts, on-boarding processes and creating a network of contacts to help keep you busy.
+CC is a course for freelancers from Paul Jarvis and Kaleigh Moore that covers all the “other stuff” that comes with working for yourself. It assumes that you’ve got a creative skill — be it writing, design or development — and shows you how to use that skill to earn a living. It covers many of the common pitfalls for new freelancers like pricing, contracts, on-boarding processes and creating a network of contacts to help keep you busy.
 
 ## Not just another course
 Having taken too many online courses <span style="font-size: 0.75rem;"> — I used to a be a sucker for the _“quick-wins”_ that many promised —</span> I’ve found zero correlation between the value a course offers and how much it costs or how much material it includes.

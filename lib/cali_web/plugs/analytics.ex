@@ -7,6 +7,35 @@ defmodule CaliWeb.Plug.Analytics do
 
   def call(conn, _options) do
     IO.inspect conn
+
+    r = extract_referer(conn)
+
+    page = conn.request_path
+
+    attrs = %{
+      referer: r,
+      page: conn.request_path,
+      internal_referer: is_internal(r),
+    }
+
+    Cali.Analytics.log_page(attrs)
+
+    conn
+  end
+
+  defp extract_referer(conn) do
+    case get_req_header(conn, "referer") do
+      [referer | _tail ] -> referer
+      _ -> nil
+    end
+  end
+
+  defp host() do
+    CaliWeb.Endpoint.config(:url)[:host]
+  end
+
+  defp is_internal(referer) do
+    !Regex.match?(~r/(\Awww\.)?#{referer}.*\z/i, host())
   end
 
 end
