@@ -1,7 +1,12 @@
 @font-face {
   font-family: 'Wetzlar';
-  src:  url('fonts/wetzlar.woff2') format('woff2'),
-        url('fonts/wetzlar.woff') format('woff');
+  src:  url('/fonts/wetzlar.woff2') format('woff2'),
+        url('/fonts/wetzlar.woff') format('woff');
   font-weight: normal;
   font-style: normal;
+}
+
+.wetzlar {
+  font-family: 'Wetzlar', BlinkMacSystemFont, -apple-system, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  text-transform: uppercase;
 }
