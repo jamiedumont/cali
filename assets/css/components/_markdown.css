@@ -1,3 +1,9 @@
+.wetzlar {
+  font-family: 'Wetzlar', BlinkMacSystemFont, -apple-system, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  text-transform: uppercase !important;
+  font-weight: normal !important;
+}
+
 .markdown {
 
   p, ol, ul  {
@@ -36,6 +42,66 @@
     @apply .border-l-4 .border-grey .pl-8 .my-8 .font-serif .italic .text-2xl .leading-normal;
     p {
       @apply .text-2xl .italic .font-serif;
+    }
+  }
+
+  figure {
+    @apply .text-center .w-full .mb-6;
+
+    img {
+      @apply .w-full;
+    }
+
+    figcaption {
+      @apply .text-grey-dark .my-2 .italic .text-center .text-xs .font-hairline;
+    }
+
+  }
+
+  .three-images {
+    @apply .mb-6;
+  }
+
+}
+
+.content {
+
+  p, ol, ul  {
+    @apply .leading-normal .mb-6 .text-grey-darkest .font-light;
+
+    b {
+      @apply .font-semibold;
+    }
+  }
+
+  a {
+    @apply .no-underline .font-semibold text-green;
+  }
+
+  h2 {
+    @apply .mb-4 .mt-8 .text-4xl;
+  }
+
+  h3 {
+    @apply .mb-4 .mt-8 .text-2xl;
+  }
+
+  code {
+    @apply bg-dark-blue text-grey-lightest px-1;
+  }
+
+  pre {
+    @apply my-4 bg-dark-blue text-grey-lightest p-4 leading-normal block;
+    font-size: 0.7rem;
+    white-space: pre-wrap;
+    word-break: break-all;
+    word-wrap: break-word;
+  }
+
+  blockquote {
+    @apply .border-l-4 .border-green .pl-6 .py-2 .my-8 .font-serif .italic .text-xl .leading-normal;
+    p {
+      @apply .text-xl .italic .font-serif;
     }
   }
 

@@ -9,7 +9,7 @@ defmodule CaliWeb.PageController do
   end
 
   def index(conn, _params) do
-    {:ok, posts} = Cali.Repo.list()
+    {:ok, posts} = Cali.PostRepo.list()
     render conn, "index.html", posts: posts
   end
 end

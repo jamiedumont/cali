@@ -8,12 +8,21 @@ use Mix.Config
 # with brunch.io to recompile .js and .css sources.
 config :cali, CaliWeb.Endpoint,
   http: [port: 4000],
+  url: [scheme: "http", host: "178.62.82.117", port: 4000],
   debug_errors: true,
   code_reloader: true,
-  check_origin: false,
-  watchers: [node: ["node_modules/brunch/bin/brunch", "watch", "--stdin",
-                    cd: Path.expand("../assets", __DIR__)]]
+  check_origin: false
+  #  watchers: [node: ["node_modules/brunch/bin/brunch", "watch", "--stdin",
+  #                  cd: Path.expand("../assets", __DIR__)]]
 
+config :cali, Cali.Repo,
+  adapter: Ecto.Adapters.Postgres,
+  database: "cali_dev",
+  username: "postgres",
+  password: "postgres",
+  port: "5432"
+
+    
 # ## SSL Support
 #
 # In order to use HTTPS in development, a self-signed

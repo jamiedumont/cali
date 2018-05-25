@@ -26,7 +26,7 @@ I want to be very public and open about these projects — both the good times, 
 
 A lot of developers suffer from _"Imposter's Syndrome"_ - I certainly do at times - because as a collective, we only talk about it when it's going well, and we've got everything figured out. We only write a blog post, or tweet about something once we've got it all worked out, even though we might have spent endless frustrating hours getting to that point. It gives less experienced developers an unrealistic view of what it takes to build something, and perpetuates the myth amongst those we work for that what we do is easy.
 
-Developer's blogs read like people's Facebook feed — a wall of endless highlights. Instead, they should probably read like a story pulled from the pages of StackOverflow - although maybe with less snark and sarcasm...
+Developer's blogs read like people's Facebook feed — a wall of endless highlights. Instead, they should probably read like a story pulled from the pages of Stack Overflow - although maybe with less snark and sarcasm...
 
 I want to share my process, warts and all, so that we all learn something and perhaps feel a little less uncomfortable with what we don't know.
 
