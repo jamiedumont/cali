@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>404: Page not found | Jamie Dumont</title>
+    <link rel="stylesheet" href="<%= static_path(@conn, "/css/app.css") %>">
+  </head>
+
+  <body>
+
+    <header class="max-w-md mx-auto mb-8 mt-16 md:mt-32">
+      <a href="<%= page_url(@conn, :index) %>">
+        <img
+          class="mx-auto block h-32"
+          src="<%= static_path(@conn, "/images/logo.svg") %>"
+          alt=""
+          >
+      </a>
+    </header>
+
+
+    <main class="text-center px-8 md:px-0" role="main">
+      <h1 class="mb-8">404 - Page not found</h1>
+      <p class="max-w-sm leading-normal mx-auto">
+        Sorry, but the page you were looking for couldn't be found. Head 
+        <a class="text-green no-underline border-b-2 border-grey hover:border-grey-darkest pb-1 font-semibold" href="<%= page_url(@conn, :index) %>">home</a> 
+        and try again!
+      </p>
+    </main>
+
+  </body>
+
+</html>
