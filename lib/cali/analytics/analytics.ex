@@ -6,4 +6,8 @@ defmodule Cali.Analytics do
     IO.inspect attrs
     Cali.Repo.insert(PageView.changeset(%PageView{}, attrs))
   end
+
+  def all() do
+    Cali.Repo.all(PageView)
+  end
 end
