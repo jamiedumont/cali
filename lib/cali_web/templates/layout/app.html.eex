@@ -14,14 +14,9 @@
 
   <body>
 
-    <header class="max-w-md mx-auto mb-8 mt-16 md:mt-32">
-      <a href="<%= page_url(@conn, :index) %>">
-        <img
-          class="mx-auto block h-32"
-          src="<%= static_path(@conn, "/images/logo.svg") %>"
-          alt=""
-          >
-      </a>
+    <header class="mb-16 flex bg-dark-blue text-white">
+      <a class=" py-2 px-3 text-sm uppercase wetzlar text-white no-underline flex-1" href="<%= page_url(@conn, :index) %>">Jamie Dumont</a>
+      <span class="px-3 py-2 bg-orange text-white uppercase wetzlar text-sm">Menu</span>
     </header>
 
     <p class="alert alert-info" role="alert"><%= get_flash(@conn, :info) %></p>

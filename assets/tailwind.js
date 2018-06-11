@@ -142,7 +142,8 @@ let selected_colors =  {
   'grey-lighter': colors['grey-lighter'],
   'grey-lightest': colors['grey-lightest'],
   'white': colors['white'],
-  'dark-blue': '#181a26',
+  'dark-blue': '#0B2230',
+  'orange': '#F48E05',
 }
 
 module.exports = {
