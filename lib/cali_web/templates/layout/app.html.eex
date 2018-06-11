@@ -27,7 +27,7 @@
     <p class="alert alert-info" role="alert"><%= get_flash(@conn, :info) %></p>
     <p class="alert alert-danger" role="alert"><%= get_flash(@conn, :error) %></p>
 
-    <main class="px-8 md:px-0" role="main">
+    <main class="max-w-xl mx-auto px-8" role="main">
       <%= render @view_module, @view_template, assigns %>
     </main>
 

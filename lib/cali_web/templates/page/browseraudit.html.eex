@@ -1,1 +1,49 @@
-<h1>Browser Audit</h1>
+<div class="flex flex-wrap pt-16 md:mt-16 mb-32">
+
+  <div class="w-full mb-16 md:w-1/3">
+    <h1 class="mb-2">Performance <br/> Audit</h1>
+    <p class="text-grey font-light mb-6">From £1600</p>
+    <a href="mailto:jamidumont@icloud.com" class="no-underline my-6 px-3 py-2 font-semibold bg-green text-white shadow rounded-sm">Enquire</a>
+  </div>
+
+  <div class="w-full md:w-2/3">
+
+    <div class="-mx-4 flex flex-wrap">
+      <div class="mb-10 px-4 w-1/2">
+        <h2 class="py-2 text-base border-b mb-2">Aim</h2>
+        <p class="leading-normal text-sm">To reduce the time and resources required to load any given webpage or site.</p>
+      </div>
+      <div class="mb-10 px-4 w-1/2">
+        <h2 class="py-2 text-base border-b mb-2">Outcome</h2>
+        <p class="leading-normal text-sm">A smoother user experience, (often) sub-second page loads and a marked increase in conversions.</p>
+      </div>
+      <div class="mb-10 px-4 w-1/2">
+        <h2 class="py-2 text-base border-b mb-2">Benefits</h2>
+        <p class="leading-normal text-sm">A tighter, more logical codebase that’s easier to work with. Happier developers and fewer bugs are other nice side effects.</p>
+      </div>
+      <div class="mb-10 px-4 w-1/2">
+        <h2 class="py-2 text-base border-b mb-2">Method</h2>
+        <p class="leading-normal text-sm">Removing unnecessary or duplicated assets and restructuring and optimising what remains.</p>
+      </div>
+    
+    </div>
+
+    <p class="leading-normal mb-6">
+      In the rush to meet deadlines and ship features, performance is often one of the first things that gets sacrificed. It’s much easier to just write some new CSS or use a JS package than it is to properly integrate the changes into the existing code.
+    </p>
+
+    <p class="mb-6 leading-normal">
+      This audit provides you with a path back to a fast, logical and stable codebase.
+    </p>
+
+    <p class="mb-6 leading-normal">
+      After getting access to your codebase and discussing any areas of concern that you already have, I’ll work out how to best optimise your website. You’ll be provided a report with a full break down of where you site needs attention, along with tailored examples of how remedy your specific issues and prevent them happening again.</p>
+
+    <p class="mb-6 leading-normal">
+    The practical result of this exercise is an improved codebase, less headaches for your development team and a faster experience for your users. In real-world terms it will often boost your conversion rates and assist with your ranking in search results.
+    </p>
+
+  
+  </div>
+
+</div>

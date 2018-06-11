@@ -24,7 +24,7 @@ defmodule CaliWeb.Router do
 
     # static pages
     get "/services", PageController, :services
-    get "/services/browser-audit", PageController, :browseraudit
+    get "/services/performance-audit", PageController, :browseraudit
     get "/about", PageController, :about
     get "/uses", PageController, :uses
 

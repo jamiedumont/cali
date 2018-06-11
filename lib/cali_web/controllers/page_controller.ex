@@ -14,12 +14,5 @@ defmodule CaliWeb.PageController do
     render conn, "index.html", posts: posts
   end
 
-  def services(conn, _) do
-    render conn, "services.html"
-  end
-
-  def browseraudit(conn, _) do
-    render conn, "browseraudit.html"
-  end
 
 end
