@@ -25,6 +25,13 @@ pre_erlang_clean_compile() {
       npm run css
     "
 
+  status "Copying static assets"
+    __sync_remote "
+      [ -f ~/.profile ] && source ~/.profile
+      set -e
+      cp -r '$BUILD_AT'/assets/static '$BUILD_AT'/priv
+    "
+
   status "Running phoenix.digest" # log output prepended with "----->"
   __sync_remote " # runs the commands on the build host
     [ -f ~/.profile ] && source ~/.profile # load profile (optional)
@@ -36,11 +43,4 @@ pre_erlang_clean_compile() {
     APP='$APP' MIX_ENV='$TARGET_MIX_ENV' $MIX_CMD phx.digest $SILENCE
     APP='$APP' MIX_ENV='$TARGET_MIX_ENV' $MIX_CMD phx.digest.clean $SILENCE
   "
-  
-  status "Copying static assets"
-    __sync_remote "
-      [ -f ~/.profile ] && source ~/.profile
-      set -e
-      cp -r '$BUILD_AT'/assets/static '$BUILD_AT'/priv
-    "
 }
