@@ -11,13 +11,6 @@ config :cali, CaliWeb.Endpoint,
 config :cali, CaliWeb.Endpoint,
   secret_key_base: System.get_env("SECRET_KEY_BASE")
 
-config :cali, Cali.Repo,
-  adapter: Ecto.Adapters.Postgres,
-  database: "cali",
-  username: "postgres",
-  password: "postgres",
-  port: "5432"
-
 # Do not print debug messages in production
 config :logger, level: :info
 

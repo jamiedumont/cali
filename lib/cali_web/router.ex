@@ -16,8 +16,6 @@ defmodule CaliWeb.Router do
   scope "/", CaliWeb do
     pipe_through :browser # Use the default browser stack
 
-    get "/analytics", AnalyticsController, :index
-
     get "/blog/:slug", PostController, :show
     get "/update", PostController, :update
     get "/", PageController, :index

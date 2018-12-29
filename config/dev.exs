@@ -15,13 +15,6 @@ config :cali, CaliWeb.Endpoint,
   watchers: [npm: ["run", "watch",
                     cd: Path.expand("../assets", __DIR__)]]
 
-config :cali, Cali.Repo,
-  adapter: Ecto.Adapters.Postgres,
-  database: "cali_dev",
-  username: "postgres",
-  password: "postgres",
-  port: "5432"
-
 # Watch static and templates for browser reloading.
 config :cali, CaliWeb.Endpoint,
   live_reload: [

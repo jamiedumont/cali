@@ -10,7 +10,6 @@ defmodule Cali.Application do
     children = [
       # Start the endpoint when the application starts
       supervisor(CaliWeb.Endpoint, []),
-      Cali.Repo,
       # Start your own worker by calling: Cali.Worker.start_link(arg1, arg2, arg3)
       # worker(Cali.Worker, [arg1, arg2, arg3]),
       worker(Cali.PostRepo, [])

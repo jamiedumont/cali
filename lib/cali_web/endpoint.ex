@@ -31,7 +31,6 @@ defmodule CaliWeb.Endpoint do
   plug Plug.Head
 
   plug CaliWeb.Plug.Redirect
-  plug CaliWeb.Plug.Analytics
 
   # The session will be stored in the cookie and signed,
   # this means its contents can be read but not tampered with.
