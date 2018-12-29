@@ -4,7 +4,7 @@ defmodule Cali.Mixfile do
   def project do
     [
       app: :cali,
-      version: "0.0.12",
+      version: "0.0.13",
       elixir: "~> 1.7",
       elixirc_paths: elixirc_paths(Mix.env),
       compilers: [:phoenix, :gettext] ++ Mix.compilers,
