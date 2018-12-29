@@ -1,0 +1,9 @@
+APP="cali"
+
+BUILD_HOST="elixir"
+BUILD_USER="jamie"
+BUILD_AT="/tmp/edeliver/cali/builds"
+
+PRODUCTION_HOSTS="elixir" 
+PRODUCTION_USER="jamie" 
+DELIVER_TO="/home/jamie/releases"

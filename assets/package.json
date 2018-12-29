@@ -6,7 +6,6 @@
     "css:postcss": "./node_modules/postcss-cli/bin/postcss css/app.css -o ../priv/static/css/app.css --config ./postcss.config.js",
     "css": "npm run css:postcss && npm run css:purge",
     "watch": "npm run css:postcss -- -w"
-
   },
   "dependencies": {
     "phoenix": "file:../deps/phoenix",

@@ -1,7 +1,7 @@
 use Mix.Config
 
 config :cali, CaliWeb.Endpoint,
-  http: [port: {:system, "PORT"}],
+  http: [port: 3232],
   url: [scheme: "https", host: "www.jamiedumont.co.uk", port: 443],
   cache_static_manifest: "priv/static/cache_manifest.json",
   server: true,

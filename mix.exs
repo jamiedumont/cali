@@ -19,7 +19,7 @@ defmodule Cali.Mixfile do
   def application do
     [
       mod: {Cali.Application, []},
-      extra_applications: [:logger, :runtime_tools, :yamerl]
+      extra_applications: [:logger, :runtime_tools, :yamerl, :edeliver]
     ]
   end
 
@@ -41,7 +41,8 @@ defmodule Cali.Mixfile do
       {:yamerl, github: "yakaz/yamerl"},
       {:earmark, "~> 1.2.5"},
       {:timex, "~> 3.1"},
-      {:distillery, "~> 2.0"},
+      {:distillery, "~> 2.0", warn_missing: false},
+      {:edeliver, ">= 1.6.0"}
     ]
   end
 end
