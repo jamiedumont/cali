@@ -47,8 +47,7 @@ end
 release :cali do
   set version: current_version(:cali)
   set applications: [
-    :runtime_tools,
-    :edeliver
+    :runtime_tools
   ]
 end
 
