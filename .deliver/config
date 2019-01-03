@@ -29,7 +29,7 @@ pre_erlang_clean_compile() {
     __sync_remote "
       [ -f ~/.profile ] && source ~/.profile
       set -e
-      cp -r '$BUILD_AT'/assets/static '$BUILD_AT'/priv
+      cp -r '$BUILD_AT'/assets/static '$BUILD_AT'/priv/static
     "
 
   status "Running phoenix.digest" # log output prepended with "----->"

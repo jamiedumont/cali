@@ -10,7 +10,7 @@
     %>
 
     <link rel="stylesheet" href="<%= static_path(@conn, "/css/app.css") %>">
-    <link rel="stylesheet" href="<%= static_path(@conn, "/highlightjs.css") %>">
+    <link rel="stylesheet" href="<%= static_path(@conn, "/images/hljs.css") %>">
   </head>
 
   <body>
@@ -97,7 +97,7 @@
       </nav>
     </footer>
 
-    <script src="<%= static_path(@conn, "/highlight.pack.js") %>"></script>
+    <script src="<%= static_path(@conn, "/images/hljs.js") %>"></script>
     <script>
       hljs.configure({
       //  useBR: true
