@@ -26,18 +26,6 @@
     @apply .mb-4 .mt-8 .text-2xl;
   }
 
-  code {
-    @apply bg-dark-blue text-grey-lightest px-1;
-  }
-
-  pre {
-    @apply my-4 bg-dark-blue text-grey-lightest p-4 leading-normal block;
-    font-size: 0.7rem;
-    white-space: pre-wrap;
-    word-break: break-all;
-    word-wrap: break-word;
-  }
-
   blockquote {
     @apply .border-l-4 .border-grey .pl-8 .my-8 .font-serif .italic .text-2xl .leading-normal;
     p {
@@ -84,18 +72,6 @@
 
   h3 {
     @apply .mb-4 .mt-8 .text-2xl;
-  }
-
-  code {
-    @apply bg-dark-blue text-grey-lightest px-1;
-  }
-
-  pre {
-    @apply my-4 bg-dark-blue text-grey-lightest p-4 leading-normal block;
-    font-size: 0.7rem;
-    white-space: pre-wrap;
-    word-break: break-all;
-    word-wrap: break-word;
   }
 
   blockquote {
