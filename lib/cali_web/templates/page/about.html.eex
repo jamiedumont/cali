@@ -1,13 +1,10 @@
 <div class="max-w-md mx-auto py-8">
   <span class="mb-4 font-light text-lg inline-block">Hi, I'm <h1 class="font-semibold inline text-lg"> Jamie Dumont</h1></span>
   <div class="content">
-    <p>I'm going to share a secret with you... I really don't want to write one of those <em>"I'm-so-talented-and-passionate"</em> bios that everyone tells you to write. They just sound like such bullsh*t!</p>
 
-    <p>I've also been told that I could charge more if I pretended that I ran an "agency" or referred to myself as a "consultant"; but then I'd sound stuck up when you find out it's just me.</p>
+    <p>I don't like long, self-indulgent bios, so let's go with this:</p>
 
-    <p>Instead, let's go with this:</p>
-
-    <blockquote class="text-lg">I'm a freelance web developer living in Cornwall. I've been building websites since 2013, but trained as a Graphic Designer before that.</blockquote>
+    <blockquote class="text-lg">I'm a web developer living in Cornwall. I've been building websites since 2013, but trained as a Graphic Designer before that.</blockquote>
 
     <blockquote class="text-lg">I've helped many small businesses build and improve their websites, but have also worked on large scale web applications. I was Lead Developer at <a href="https://www.bikesoup.com">Bikesoup</a> and continue to help them refine their marketplace.</blockquote>
 
