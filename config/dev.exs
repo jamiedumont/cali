@@ -8,7 +8,7 @@ use Mix.Config
 # with brunch.io to recompile .js and .css sources.
 config :cali, CaliWeb.Endpoint,
   http: [port: 4000],
-  url: [scheme: "http", host: "localhost", port: 4000],
+  url: [host: "178.62.121.241", port: 4000], # This is critical for ensuring web-sockets properly authorize.
   debug_errors: true,
   code_reloader: true,
   check_origin: false,

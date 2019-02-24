@@ -13,6 +13,6 @@ config :cali, CaliWeb.Endpoint,
 # Do not print debug messages in production
 config :logger, level: :info
 
-# If you are doing OTP releases, you need to instruct Phoenix
 # to start the server for all endpoints:
+# If you are doing OTP releases, you need to instruct Phoenix
 config :phoenix, :serve_endpoints, true

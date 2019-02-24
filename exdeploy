@@ -1,0 +1,126 @@
+#!/bin/bash
+
+APP="cali"
+PROD_SERVER="elixir"
+BUILD_DIR="/home/jamie/sites/cali"
+DEPLOY_DIR="/home/jamie/apps/${APP}"
+
+############
+
+VERSION=`awk '/version: \"(.*)\"/{ print $2 }' ./mix.exs | cut -d '"' -f2`
+
+
+build() {
+  echo -e "Building version ${VERSION}\n"
+
+  ### Clean
+#  echo -e "--> Cleaning local source tree\n"
+#  mix clean
+#  rm -rf priv/images
+#  rm -rf priv/static/*
+#  rm priv/server.js
+#  rm priv/webpack.stats.json
+  # ... add any other files here you feel should be removed
+
+  ### Build locally
+  echo -e "--> Building...\n"
+  cd ${BUILD_DIR} && mix deps.get --only prod
+  cd ${BUILD_DIR} && MIX_ENV=prod mix compile
+
+  echo -e "--> Compiling assets...\n"
+  cd ${BUILD_DIR}/assets && npm install
+  cd ${BUILD_DIR} && cd assets && npm run deploy
+  cd ${BUILD_DIR} && cp -r assets/static priv
+  cd ${BUILD_DIR} && MIX_ENV=prod mix phx.digest
+  cd ${BUILD_DIR} && MIX_ENV=prod mix release
+}
+
+deploy() {
+  ### Copy release
+  echo -e "--> Uploading release\n"
+  rsync -azq ./_build/prod/rel/${APP}/releases/${VERSION}/${APP}.tar.gz ${PROD_SERVER}:${DEPLOY_DIR}
+
+  echo -e "--> Unpacking release\n"
+  ssh ${PROD_SERVER} -- "cd ${DEPLOY_DIR} && tar -xf ${APP}.tar.gz"
+}
+
+migrate() {
+  echo -e "--> Running migrations\n"
+  ssh ${PROD_SERVER} -- "cd ${DEPLOY_DIR} && ./bin/${APP} migrate"
+}
+
+seed() {
+  echo -e "--> Running seeds\n"
+  ssh ${PROD_SERVER} -- "cd ${DEPLOY_DIR} && ./bin/${APP} seed"
+}
+
+upgrade() {
+  echo -e "Upgrading to version ${VERSION}\n"
+  ssh ${PROD_SERVER} -- "cd ${DEPLOY_DIR} && bin/${APP} upgrade ${VERSION}"
+}
+
+downgrade() {
+  echo -e "Not yet implemented"
+}
+
+start() {
+  ssh ${PROD_SERVER} -- "cd ${DEPLOY_DIR} && bin/${APP} start"
+}
+
+stop() {
+  ssh ${PROD_SERVER} -- "cd ${DEPLOY_DIR} && bin/${APP} stop"
+}
+
+restart() {
+  ssh ${PROD_SERVER} -- "cd ${DEPLOY_DIR} && bin/${APP} restart"
+}
+
+console() {
+  ssh ${PROD_SERVER} -- "cd ${DEPLOY_DIR} && bin/${APP} remote_console"
+}
+
+clean() {
+  echo -e "--> Cleaning build dir on remote\n"
+  ssh ${PROD_SERVER} -- "rm -rf ${BUILD_DIR}/*"
+}
+
+case "$1" in
+  build)
+    build
+    ;;
+  deploy)
+    deploy
+    ;;
+  migrate)
+    migrate
+    ;;
+  seed)
+    seed
+    ;;
+  start)
+    start
+    ;;
+  stop)
+    stop
+    ;;
+  restart)
+    stop
+    start
+    ;;
+  upgrade)
+    upgrade
+    ;;
+  downgrade)
+    downgrade
+    ;;
+  console)
+    console
+    ;;
+  clean)
+    clean
+    ;;
+  *)
+    echo "Usage: $0 {build|deploy|migrate|seed|upgrade|downgrade|stop|start|restart|clean}" >&2
+    exit 1
+    ;;
+esac

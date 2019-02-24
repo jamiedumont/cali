@@ -5,7 +5,8 @@
     "css:purge": "./node_modules/purgecss/bin/purgecss -c purge.config.js -o ../priv/static/css",
     "css:postcss": "./node_modules/postcss-cli/bin/postcss css/app.css -o ../priv/static/css/app.css --config ./postcss.config.js",
     "css": "npm run css:postcss && npm run css:purge",
-    "watch": "npm run css:postcss -- -w"
+    "watch": "npm run css:postcss -- -w",
+    "deploy": "npm run css"
   },
   "dependencies": {
     "phoenix": "file:../deps/phoenix",
