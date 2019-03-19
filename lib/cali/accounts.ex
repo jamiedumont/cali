@@ -6,7 +6,7 @@ defmodule Cali.Accounts do
   import Ecto.Query, warn: false
   alias Cali.Repo
 
-  alias Cali.Accounts.User
+  alias Cali.Accounts.{ User, Credential }
 
   @doc """
   Returns the list of users.
@@ -18,7 +18,9 @@ defmodule Cali.Accounts do
 
   """
   def list_users do
-    Repo.all(User)
+    User
+    |> Repo.all()
+    |> Repo.preload(:credential)
   end
 
   @doc """
@@ -35,7 +37,11 @@ defmodule Cali.Accounts do
       ** (Ecto.NoResultsError)
 
   """
-  def get_user!(id), do: Repo.get!(User, id)
+  def get_user!(id) do
+    User
+    |> Repo.get!(id)
+    |> Repo.preload(:credential)
+  end
 
   @doc """
   Creates a user.
@@ -52,6 +58,7 @@ defmodule Cali.Accounts do
   def create_user(attrs \\ %{}) do
     %User{}
     |> User.changeset(attrs)
+    |> Ecto.Changeset.cast_assoc(:credential, with: &Credential.changeset/2)
     |> Repo.insert()
   end
 
@@ -70,6 +77,7 @@ defmodule Cali.Accounts do
   def update_user(%User{} = user, attrs) do
     user
     |> User.changeset(attrs)
+    |> Ecto.Changeset.cast_assoc(:credential, with: &Credential.changeset/2)
     |> Repo.update()
   end
 
@@ -197,4 +205,24 @@ defmodule Cali.Accounts do
   def change_credential(%Credential{} = credential) do
     Credential.changeset(credential, %{})
   end
+
+  def get_user_by_email(email) do
+    query =
+      from u in User,
+      inner_join: c in assoc(u, :credential),
+      where: c.email == ^email
+
+    Repo.one(query) |> Repo.preload(:credential)
+  end
+
+  def authenticate_by_email_password(email, password) do
+    user = get_user_by_email(email)
+    case Argon2.check_pass(user.credential, password) do
+      {:ok, %Credential{}} ->
+        {:ok, user}
+      {:error, "invalid password"} ->
+        {:error, :unauthorised}
+    end
+  end
+
 end

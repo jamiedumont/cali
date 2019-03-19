@@ -3,8 +3,8 @@ defmodule Cali.Accounts.User do
   import Ecto.Changeset
 
   schema "users" do
-    field :email, :string
     field :name, :string
+    has_one :credential, Cali.Accounts.Credential, on_replace: :update
 
     timestamps()
   end
@@ -12,8 +12,7 @@ defmodule Cali.Accounts.User do
   @doc false
   def changeset(user, attrs) do
     user
-    |> cast(attrs, [:name, :email])
-    |> validate_required([:name, :email])
-    |> unique_constraint(:email)
+    |> cast(attrs, [:name])
+    |> validate_required([:name])
   end
 end

@@ -8,9 +8,10 @@
   </li>
 
   <li>
-    <strong>Email:</strong>
-    <%= @user.email %>
+    <strong>Name:</strong>
+    <%= @user.credential.email %>
   </li>
+
 
 </ul>
 

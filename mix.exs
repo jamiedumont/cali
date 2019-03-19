@@ -46,7 +46,8 @@ defmodule Cali.Mixfile do
       {:distillery, "~> 2.0", warn_missing: false},
       {:ecto_sql, "~> 3.0"},
       {:phoenix_ecto, "~> 4.0"},
-      {:postgrex, ">= 0.0.0"}
+      {:postgrex, ">= 0.0.0"},
+      {:argon2_elixir, "~> 2.0"}
     ]
   end
 end

@@ -19,6 +19,8 @@ defmodule CaliWeb.UserController do
       {:ok, user} ->
         conn
         |> put_flash(:info, "User created successfully.")
+        |> put_session(:user_id, user.id)
+        |> configure_session(renew: true)
         |> redirect(to: Routes.user_path(conn, :show, user))
 
       {:error, %Ecto.Changeset{} = changeset} ->
