@@ -9,11 +9,18 @@ use Mix.Config
 config :cali, CaliWeb.Endpoint,
   http: [port: 4000],
   url: [host: "178.62.121.241", port: 4000], # This is critical for ensuring web-sockets properly authorize.
-  debug_errors: true,
+  debug_errors: false,
   code_reloader: true,
   check_origin: false,
-  watchers: [npm: ["run", "watch",
-                    cd: Path.expand("../assets", __DIR__)]]
+  watchers: [
+    node: [
+      "node_modules/webpack/bin/webpack.js",
+      "--mode",
+      "development",
+      "--watch-stdin",
+      cd: Path.expand("../assets", __DIR__)
+    ]
+  ]
 
 # Watch static and templates for browser reloading.
 config :cali, CaliWeb.Endpoint,
@@ -32,3 +39,11 @@ config :logger, :console, format: "[$level] $message\n"
 # Set a higher stacktrace during development. Avoid configuring such
 # in production as building large stacktraces may be expensive.
 config :phoenix, :stacktrace_depth, 20
+
+config :cali, Cali.Repo,
+  database: "cali_dev",
+  username: "postgres",
+  password: "postgres",
+  hostname: "localhost",
+  port: "5432"
+  

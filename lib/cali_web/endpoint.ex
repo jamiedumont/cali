@@ -1,7 +1,7 @@
 defmodule CaliWeb.Endpoint do
   use Phoenix.Endpoint, otp_app: :cali
 
-  socket "/socket", CaliWeb.UserSocket
+  socket "/socket", CaliWeb.UserSocket, websockety: true
 
   # Serve at "/" the static files from "priv/static" directory.
   #
@@ -25,12 +25,11 @@ defmodule CaliWeb.Endpoint do
   plug Plug.Parsers,
     parsers: [:urlencoded, :multipart, :json],
     pass: ["*/*"],
-    json_decoder: Poison
+    json_decoder: Jason
 
   plug Plug.MethodOverride
   plug Plug.Head
 
-  plug CaliWeb.Plug.Redirect
 
   # The session will be stored in the cookie and signed,
   # this means its contents can be read but not tampered with.
@@ -39,6 +38,9 @@ defmodule CaliWeb.Endpoint do
     store: :cookie,
     key: "_cali_key",
     signing_salt: "dcS0HO7M"
+
+  # Checks for old URLS and redirect them
+  plug CaliWeb.Plug.Redirect
 
   plug CaliWeb.Router
 

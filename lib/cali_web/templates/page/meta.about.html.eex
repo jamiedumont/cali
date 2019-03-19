@@ -3,17 +3,17 @@
   name="description"
   content="A web developer based in Cornwall who builds sites and apps with Elixir, Javascript & Statamic (although not all at once!). Previously Lead Developer at Bikesoup, now working with small businesses and agencies to help build durable, resilient websites and businesses"
 >
-<link rel="canonical" href="<%= current_url(assigns.conn, %{}) %>" />
+<link rel="canonical" href="<%= Routes.current_url(assigns.conn, %{}) %>" />
 
 <!-- Open Graph data -->
 <meta property="og:title" content="About | Web Developer in Cornwall - Jamie Dumont" />
-<meta property="og:url" content="<%= current_url(assigns.conn, %{}) %>" />
+<meta property="og:url" content="<%= Routes.current_url(assigns.conn, %{}) %>" />
 <meta property="og:type" content="website" />
 <meta property="og:description" content="A web developer based in Cornwall who builds sites and apps with Elixir, Javascript & Statamic (although not all at once!). Previously Lead Developer at Bikesoup, now working with small businesses and agencies to help build durable, resilient websites and businesses" />
 
 <!-- Twitter Card -->
 <meta name="twitter:title" content="About | Web Developer in Cornwall - Jamie Dumont" />
 <meta name="twitter:description" content="A web developer based in Cornwall who builds sites and apps with Elixir, Javascript & Statamic (although not all at once!). Previously Lead Developer at Bikesoup, now working with small businesses and agencies to help build durable, resilient websites and businesses" />
-<meta name="twitter:url" content="<%= current_url(assigns.conn, %{}) %>" />
+<meta name="twitter:url" content="<%= Routes.current_url(assigns.conn, %{}) %>" />
 
 

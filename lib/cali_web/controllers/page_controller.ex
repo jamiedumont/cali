@@ -14,5 +14,4 @@ defmodule CaliWeb.PageController do
     render conn, "index.html", posts: posts
   end
 
-
 end

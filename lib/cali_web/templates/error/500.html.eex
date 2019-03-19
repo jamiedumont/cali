@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>404: Page not found | Jamie Dumont</title>
+    <title>500: Internal error | Jamie Dumont</title>
     <link rel="stylesheet" href="<%= Routes.static_path(@conn, "/css/app.css") %>">
   </head>
 
@@ -22,9 +22,9 @@
 
 
     <main class="text-center px-8 md:px-0" role="main">
-      <h1 class="mb-8">404 - Page not found</h1>
+      <h1 class="mb-8">500 - Internal error</h1>
       <p class="max-w-sm leading-normal mx-auto">
-        Sorry, but the page you were looking for couldn't be found. Head 
+        Sorry, but something's gone wrong. Head
         <a class="text-green no-underline border-b-2 border-grey hover:border-grey-darkest pb-1 font-semibold" href="<%= Routes.page_url(@conn, :index) %>">home</a> 
         and try again!
       </p>

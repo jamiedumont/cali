@@ -1,8 +1,3 @@
-# This file is responsible for configuring your application
-# and its dependencies with the aid of the Mix.Config module.
-#
-# This configuration file is loaded before any dependency and
-# is restricted to this project.
 use Mix.Config
 
 # Configures the endpoint
@@ -14,7 +9,12 @@ config :cali, CaliWeb.Endpoint,
            adapter: Phoenix.PubSub.PG2]
 
 config :cali,
+  namespace: Cali,
   ecto_repos: [Cali.Repo]
+
+# Use Jason for JSON parsing in Ecto & Phoenix
+config :ecto, json_library: Jason
+config :phoenix, :json_library, Jason
 
 # Configures Elixir's Logger
 config :logger, :console,

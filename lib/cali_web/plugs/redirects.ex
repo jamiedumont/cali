@@ -1,6 +1,10 @@
 defmodule CaliWeb.Plug.Redirect do
   import Plug.Conn
 
+  @moduledoc """
+  Redirects old URLs to current ones. Used in CaliWeb.Endpoint
+  """
+
   def init(options) do
     options
   end

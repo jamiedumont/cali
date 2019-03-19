@@ -2,5 +2,5 @@
   <h1 class="text-2xl font-bold my-4"><%= @post.title %></h1>
   <p class="mb-8 text-grey text-sm"><%= Timex.format!(@post.date, "{Mshort} {D} {YYYY}") %></p>
   <div class="mb-16 markdown"><%= raw(@post.body) %></div>
-  <a class="text-green font-bold no-underline" href="<%= page_url(@conn, :index) %>">Back</a>
+  <a class="text-green font-bold no-underline" href="<%= Routes.page_url(@conn, :index) %>">Back</a>
 </article>

@@ -21,6 +21,7 @@ defmodule CaliWeb do
     quote do
       use Phoenix.Controller, namespace: CaliWeb
       import Plug.Conn
+      alias CaliWeb.Router.Helpers, as: Routes
       import CaliWeb.Router.Helpers
       import CaliWeb.Gettext
     end
@@ -28,8 +29,10 @@ defmodule CaliWeb do
 
   def view do
     quote do
-      use Phoenix.View, root: "lib/cali_web/templates",
-                        namespace: CaliWeb
+      use Phoenix.View,
+        root: "lib/cali_web/templates",
+        pattern: "**/*",
+        namespace: CaliWeb
 
       # Import convenience functions from controllers
       import Phoenix.Controller, only: [get_flash: 2, view_module: 1]
@@ -37,7 +40,7 @@ defmodule CaliWeb do
       # Use all HTML functionality (forms, tags, etc)
       use Phoenix.HTML
 
-      import CaliWeb.Router.Helpers
+      alias CaliWeb.Router.Helpers, as: Routes
       import CaliWeb.ErrorHelpers
       import CaliWeb.Gettext
       import CaliWeb.Helpers

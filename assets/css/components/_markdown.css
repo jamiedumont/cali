@@ -1,13 +1,7 @@
-.wetzlar {
-  font-family: 'Wetzlar', BlinkMacSystemFont, -apple-system, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  text-transform: uppercase !important;
-  font-weight: normal !important;
-}
-
 .markdown {
 
   p, ol, ul  {
-    @apply .leading-normal .mb-6 .text-grey-darkest .font-light;
+    @apply .leading-normal .mb-6 .text-grey-darkest .font-black;
 
     b {
       @apply .font-semibold;

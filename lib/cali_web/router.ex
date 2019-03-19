@@ -26,6 +26,8 @@ defmodule CaliWeb.Router do
     get "/about", PageController, :about
     get "/uses", PageController, :uses
 
+    resources "/users", UserController
+
     get "/sitemap.xml", FeedController, :sitemap
   end
 

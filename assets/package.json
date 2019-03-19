@@ -2,24 +2,28 @@
   "repository": {},
   "license": "MIT",
   "scripts": {
-    "css:purge": "./node_modules/purgecss/bin/purgecss -c purge.config.js -o ../priv/static/css",
-    "css:postcss": "./node_modules/postcss-cli/bin/postcss css/app.css -o ../priv/static/css/app.css --config ./postcss.config.js",
-    "css": "npm run css:postcss && npm run css:purge",
-    "watch": "npm run css:postcss -- -w",
-    "deploy": "npm run css"
+    "deploy": "webpack --mode production",
+    "watch": "webpack --mode development --watch"
   },
   "dependencies": {
     "phoenix": "file:../deps/phoenix",
     "phoenix_html": "file:../deps/phoenix_html"
   },
   "devDependencies": {
-    "autoprefixer": "^7.2.5",
-    "csswring": "^6.0.2",
-    "postcss-cli": "^5.0.0",
-    "postcss-import": "^11.0.0",
-    "postcss-nested": "^3.0.0",
-    "postcss-smart-import": "^0.7.6",
-    "purgecss": "^0.21.0",
-    "tailwindcss": "^0.4.1"
+    "@babel/core": "^7.0.0",
+    "@babel/plugin-proposal-class-properties": "^7.1.0",
+    "@babel/preset-env": "^7.0.0",
+    "babel-loader": "^8.0.0",
+    "copy-webpack-plugin": "^4.5.0",
+    "css-loader": "^0.28.10",
+    "mini-css-extract-plugin": "^0.4.0",
+    "optimize-css-assets-webpack-plugin": "^4.0.0",
+    "postcss-loader": "^3.0.0",
+    "purgecss": "^1.1.0",
+    "purgecss-webpack-plugin": "^1.3.1",
+    "tailwindcss": "^0.7.2",
+    "uglifyjs-webpack-plugin": "^1.2.4",
+    "webpack": "4.4.0",
+    "webpack-cli": "^2.0.10"
   }
 }
