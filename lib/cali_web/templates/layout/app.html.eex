@@ -5,8 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <%= render_existing(@view_module, "meta." <> @view_template, assigns)
-        || render CaliWeb.LayoutView, "meta.html", assigns
+    <%= 
+      render_existing(@view_module, "meta." <> @view_template, assigns)
+      || render CaliWeb.LayoutView, "meta.html", assigns
     %>
 
     <link rel="stylesheet" href="<%= Routes.static_path(@conn, "/css/app.css") %>">
@@ -36,6 +37,7 @@
 
 
 
+      <%# Comment out newsletter form until I know what I want to do with the emails
       <!-- Begin MailChimp Signup Form -->
       <div class="" id="mc_embed_signup">
 
@@ -88,6 +90,7 @@
         </form>
       </div>
       <!--End mc_embed_signup-->
+    %>
 
       <nav class="border-t border-grey-light mt-4 mb-16 py-4">
         <a class="mr-4 text-grey hover:text-green text-xs no-underline font-light hover:font-normal inline-block" href="<%= Routes.page_url(@conn, :index) %>">Home</a>

@@ -1,0 +1,18 @@
+<!-- Meta data -->
+<title><%= @post.title %> - Jamie Dumont</title>
+<meta
+  name="description"
+  content="<%= @post.description %>"
+  >
+  <link rel="canonical" href="<%= current_url(@conn, %{}) %>" />
+
+  <!-- Open Graph data -->
+  <meta property="og:title" content="<%= @post.title %>" />
+  <meta property="og:url" content="<%= current_url(@conn, %{}) %>" />
+  <meta property="og:type" content="article" />
+  <meta property="og:description" content="<%= @post.description %>" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:title" content="<%= @post.title %>" />
+  <meta name="twitter:description" content="<%= @post.description %>" />
+  <meta name="twitter:url" content="<%= current_url(@conn, %{}) %>" />
