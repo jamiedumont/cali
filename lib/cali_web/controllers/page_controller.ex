@@ -10,6 +10,7 @@ defmodule CaliWeb.PageController do
   end
 
   def index(conn, _) do
+    IO.inspect(conn)
     posts = Cali.CMS.list_posts()
     render conn, "index.html", posts: posts
   end

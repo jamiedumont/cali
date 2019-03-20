@@ -1,7 +1,7 @@
 .markdown {
 
   p, ol, ul  {
-    @apply .leading-normal .mb-6 .text-grey-darkest .font-black;
+    @apply .leading-normal .mb-6 .text-grey-darkest;
 
     b {
       @apply .font-semibold;

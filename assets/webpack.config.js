@@ -6,12 +6,6 @@ const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const PurgecssPlugin = require('purgecss-webpack-plugin');
 
-class TailwindExtractor {
-  static extract(content) {
-    return content.match(/[A-Za-z0-9-_:\/]+/g) || [];
-  }
-}
-
 module.exports = (env, options) => ({
   optimization: {
     minimizer: [
@@ -38,22 +32,18 @@ module.exports = (env, options) => ({
         use: {
           loader: 'babel-loader'
         }
-      }, {
+      },
+      {
         test: /\.css$/,
         use: [MiniCssExtractPlugin.loader, 'css-loader', 'postcss-loader']
       }
     ]
   },
   plugins: [
-    new MiniCssExtractPlugin({filename: '../css/app.css'}),
-    new CopyWebpackPlugin([
-      {
-        from: 'static/',
-        to: '../'
-      }
-    ]),
+    new MiniCssExtractPlugin({ filename: '../css/app.css' }),
+    new CopyWebpackPlugin([{ from: 'static/', to: '../' }]),
     new PurgecssPlugin({
-      paths: glob.sync('../lib/hwpo_web/templates/**/*.html.*'),
+      paths: glob.sync('../lib/cali_web/templates/**/*.html.*'),
       extractors: [
         {
           extractor: TailwindExtractor,
@@ -63,3 +53,10 @@ module.exports = (env, options) => ({
     })
   ]
 });
+
+class TailwindExtractor {
+  static extract(content) {
+    return content.match(/[A-Za-z0-9-_:\/]+/g) || [];
+  }
+}
+

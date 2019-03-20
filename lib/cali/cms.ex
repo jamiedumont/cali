@@ -41,6 +41,12 @@ defmodule Cali.CMS do
   """
   def get_post!(id), do: Repo.get!(Post, id)
 
+
+  @doc """
+  Gets a single post by it's slug.
+
+  Returns nil if the Post doesn't exist.
+  """
   def get_post_by_slug(slug) do
     query =
       from p in Post,

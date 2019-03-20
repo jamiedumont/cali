@@ -9,7 +9,7 @@ use Mix.Config
 config :cali, CaliWeb.Endpoint,
   http: [port: 4000],
   url: [host: "178.62.121.241", port: 4000], # This is critical for ensuring web-sockets properly authorize.
-  debug_errors: false,
+  debug_errors: true,
   code_reloader: true,
   check_origin: false,
   watchers: [
@@ -47,6 +47,3 @@ config :cali, Cali.Repo,
   hostname: "localhost",
   port: "5432"
 
-config :argon2_elixir,
-  t_cost: 1,
-  m_cost: 8

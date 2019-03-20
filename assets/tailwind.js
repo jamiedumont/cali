@@ -136,6 +136,7 @@ let colors = {
 let selected_colors =  {
   'green': colors['green'],
   'grey-darkest': colors['grey-darkest'],
+  'grey-darker': colors['grey-darker'],
   'grey-dark': colors['grey-dark'],
   'grey': colors['grey'],
   'grey-light': colors['grey-light'],
@@ -300,11 +301,11 @@ module.exports = {
     //    'thin': 200,
     'light': 300,
     'normal': 400,
-    //    'medium': 500,
+    'medium': 500,
     'semibold': 600,
     'bold': 700,
     //    'extrabold': 800,
-    //    'black': 900,
+    'black': 900,
   },
 
 

@@ -14,7 +14,6 @@ defmodule CaliWeb.SessionController do
         conn
         |> put_flash(:info, "Hello again #{user.name}!")
         |> put_session(:user_id, user.id)
-        |> put_session(:current_user, user)
         |> configure_session(renew: true)
         |> redirect(to: "/")
 
