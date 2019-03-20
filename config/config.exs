@@ -12,8 +12,8 @@ config :cali,
   namespace: Cali,
   ecto_repos: [Cali.Repo]
 
-# Use Jason for JSON parsing in Ecto & Phoenix
-config :ecto, json_library: Jason
+# Use Jason for JSON parsing in Phoenix
+# Ecto 3.0 uses it by default
 config :phoenix, :json_library, Jason
 
 # Configures Elixir's Logger

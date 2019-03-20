@@ -26,9 +26,12 @@ defmodule CaliWeb.Router do
     get "/about", PageController, :about
     get "/uses", PageController, :uses
 
-    resources "/users", UserController
-    resources "/sessions", SessionController, only: [:new, :create, :delete],
-                                              singleton: true
+    resources "/users", UserController, only: [:show, :edit, :update]
+
+    get "/login", SessionController, :new
+    post "/login", SessionController, :create
+    delete "/logout", SessionController, :delete
+
 
     get "/sitemap.xml", FeedController, :sitemap
   end
@@ -38,17 +41,4 @@ defmodule CaliWeb.Router do
   #   pipe_through :api
   # end
   #
-  defp authenticate_user(conn, _) do
-    case get_session(conn, :user_id) do
-      nil ->
-        conn
-        |> Phoenix.Controller.put_flash(:error, "Login required")
-        |> Phoenix.Controller.redirect(to: "/sessions/new")
-        |> halt()
-
-      user_id ->
-        assign(conn, :current_user, Cali.Accounts.get_user!(user_id))
-    end
-  end
-
 end

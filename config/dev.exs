@@ -46,4 +46,7 @@ config :cali, Cali.Repo,
   password: "postgres",
   hostname: "localhost",
   port: "5432"
-  
+
+config :argon2_elixir,
+  t_cost: 1,
+  m_cost: 8
