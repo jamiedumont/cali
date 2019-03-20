@@ -3,8 +3,8 @@ defmodule Cali.Post do
   defstruct slug: "", title: "", date: "", description: "", body: "", draft: false
 
   def compile(file) do
-    post = %Cali.Post{
-      slug: file_to_slug(file)
+    post = %{
+      "slug" => file_to_slug(file)
     }
 
     Path.join([Application.app_dir(:cali, "priv/posts"), file])
@@ -28,13 +28,12 @@ defmodule Cali.Post do
   end
 
   defp extract({props, body}, post) do
-    %{post |
-      title: get_prop(props, "title"),
-      date: Timex.parse!(get_prop(props, "date"), "{ISOdate}"),
-      description: get_prop(props, "description"),
-      draft: get_prop(props, "draft"),
-      body: body,
-    }
+    post
+    |> Map.put("title", get_prop(props, "title"))
+    |> Map.put("date", Timex.parse!(get_prop(props, "date"), "{ISOdate}"))
+    |> Map.put("description", get_prop(props, "description"))
+    |> Map.put("draft", "false")
+    |> Map.put("content", body)
   end
 
   defp get_prop(props, key) do

@@ -2,7 +2,7 @@ defmodule CaliWeb.PostController do
   use CaliWeb, :controller
 
   def show(conn, %{"slug" => slug}) do
-    {:ok, post} = Cali.PostRepo.get_by_slug(slug)
+    post = Cali.CMS.get_post_by_slug(slug)
     render(conn, "show.html", post: post)
   end
 

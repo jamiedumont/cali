@@ -14,7 +14,6 @@ defmodule Cali.Application do
       supervisor(CaliWeb.Endpoint, []),
       # Start your own worker by calling: Cali.Worker.start_link(arg1, arg2, arg3)
       # worker(Cali.Worker, [arg1, arg2, arg3]),
-      worker(Cali.PostRepo, [])
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html
