@@ -2,23 +2,3 @@ body {
   @apply .font-sans;
 }
 
-label {
-  @apply block mb-2 font-medium text-grey-darker text-sm;
-}
-
-input, textarea {
-  @apply bg-white w-full border-b border-grey-light rounded p-3 mb-4 max-w-sm appearance-none;
-}
-
-input, select {
-  height: 46px !important;
-}
-
-
-select {
-  @apply w-full block mb-0 bg-white border-b border-grey-light rounded p-3 pr-8 appearance-none;
-}
-
-input[type=text]:focus, textarea:focus, select:focus {
-  @apply border-b-4 border-green;
-}

@@ -9,8 +9,9 @@
 
 
 /* Baseline */
-@import "baseline/_fonts";
 @import "baseline/_body";
+@import "baseline/_fonts";
+@import "baseline/_inputs";
 
 
 
